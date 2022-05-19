@@ -1,0 +1,71 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+main {
+    width: 90%;
+    height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 12px solid #00C6AD;
+    background-color: pink;
+}
+main div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div {
+    width: 100%;
+    height: inherit;
+    background-color: teal;
+}
+.playlist {
+    display: flex;
+    justify-content: center;
+}
+
+.playlist span {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.random-box div:first-child{
+    width: 312px;
+    height: 312px;
+    border: 5px solid black;
+    border-radius: 50px;
+    background-color: #FFBD11;
+}
+.random-box a {
+    color:white;
+}
+.random-box div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    height: 150px;
+    justify-content: center;
+    align-items: flex-start;
+
+    
+}
+.random-box span {
+    font-size: 65px;
+    font-weight: 600;
+} 
+.random-box span:last-child{
+    font-size: 15px;
+    margin-top: 15px;
+}
+.button-box div:first-child{
+    width: 500px;
+    height: 125px;
+    border: 5px solid black;
+}
