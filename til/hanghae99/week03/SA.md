@@ -35,7 +35,7 @@
     
       더하기(+) 연산자는 숫자보다 문자열이 우선시 되기때문에, 숫자형이 문자형을 만나면 문자형으로 변환하여 연산된다. (문자 > 숫자)
       
-      ```
+      ```JavaScript
       // 더하기(+)
       number + number // number
       number + string // string
@@ -53,7 +53,7 @@
       
       (-,*,/,%)는 숫자형이 문자형보다 우선시되기 때문에 더하기와 같은 문자형으로의 변환이 일어나지 않는다. (문자 < 숫자)
       
-      ```
+      ```JavaScript
       //다른 연산자(-,*,/,%)
       string * number // number
       string * string // number
@@ -68,7 +68,7 @@
       
       아래의 예제는 엄격하지 않은 동치(==) 비교이며, 아래의 결과값은 좌우항 변환 할 경우 모두 ‘0 == 0 이기때문에’ `true` 이다.
       
-      ```
+      ```JavaScript
       null == undefined
       “0” == 0
       0 == false
@@ -83,7 +83,7 @@
 
      타입을 변경하는 기본적인 방법은 `Object(), Number(), String(), Boolean()` 와 같은 함수를 이용하는데 new 연산자가 없다면 사용한 함수는 타입을 변환하는 함수로써 사용된다.
      
-     ```
+     ```JavaScript
      var trans = 100; //Number
      Object(trans); //100
      console.log(typeof trans); //Number
@@ -96,7 +96,7 @@
      1. A Type → Number Type
      다른 자료형을 숫자타입으로 변형하는 방법은 아래와 같다.
      
-     ```
+     ```JavaScript
      Number()
 
      Number()는 정수형과 실수형의 숫자로 변환한다.
@@ -110,7 +110,7 @@
      만약 문자열이 `숫자 0` 으로 시작하면 8진수로 인식하고(구형브라우저 O, 신형브라우저X), `0x, 0X` 로 시작한다면 해당 문자열을 16진수 숫자로 인식한다.</br>
      또한 앞부분 빈 공백을 두고 나오는 문자는 모두 무시되어 NaN을 반환한다.
      
-     ```
+     ```JavaScript
      parseInt(“27”) //27
      parseInt(0033); //27
      parseInt(0x1b); //27
@@ -123,7 +123,7 @@
      parseFloat()는 부동 소수점의 숫자로 변환한다.</br>
      parseInt()와는 달리 parseFloat()는 항상 10진수를 사용하며 parseFloat() 또한 앞부분 빈 공백을 두고 나오는 문자는 모두 무시되어 NaN을 반환한다.
      
-     ```
+     ```JavaScript
      parseFloat(“!123”); //NaN
      parseFloat(“123.123456”); //123.123456
      parseInt(“123.123456”); //123
@@ -134,7 +134,7 @@
      2. A Type → String Type
      다른 자료형을 문자타입으로 변형하는 방법은 아래와 같다.
      
-     ```
+     ```JavaScript
      String()
 
      String(123); //”123"
@@ -144,7 +144,7 @@
 
      toString()는 인자로 기수를 선택할 수 있다. 인자를 전달하지 않으면 10진수로 변환한다.
      
-     ```
+     ```JavaScript
      var trans = 100;
      trans.toString(); //”100"
      trans.toString(2); //”1100100"
@@ -158,7 +158,7 @@
 
      toFixed()의 인자를 넣으면 인자값만큼 반올림하여 소수점을 표현하며 소수점을 넘치는 값이 인자로 들어오면 `0`으로 길이를 맞춘 문자열을 반환한다.
      
-     ```
+     ```JavaScript
      var trans = 123.456789;
      var roundOff = 99.987654;
      trans.toFixed(); //”123"
@@ -171,7 +171,7 @@
      3. A Type → Boolean Type
      다른 자료형을 불린(Boolean)타입으로 변형하는 방법은 아래와 같다.
      
-     ```
+     ```JavaScript
      Boolean()
 
      Boolean(100); //true
@@ -195,7 +195,8 @@
  **'=' , '==' , '===' 의 차이점**
 
  '=' 대입연산자
-  ```
+    
+  ```JavaScript
 var a = 3
 let b = 3
 const c = 3
@@ -204,7 +205,7 @@ const c = 3
 
  '==' 동등연산자(coercive)
   
-  ```
+  ```JavaScript
   var a = 3
   var b = '3'
   let c = 3
@@ -216,7 +217,8 @@ const c = 3
 
  '===' 일치연산자(strict) 
   
-  ```
+  ```JavaScript
+    
   var a = 3
   var b = '3'
   let c = 3
@@ -258,7 +260,8 @@ Typescript란 Javascript에서 코드를 입력할 때 타입을 미리 부여�
     3. 변수를 선언한 이후 값을 할당하지 않은 변수를 참조하면 undefined가 반환된다.
     4. 변수를 참조했을 때 undefined가 반환된다면 선언 이후 값이 할당되지 않은 즉, 초기화되지 않은 변수라는 것을 알 수 있다.
     
-  ```
+  ```JavaScript
+  
   let a;
   console.log(a); // undefined
   console.log(typeof a); // undefined
@@ -280,7 +283,8 @@ Typescript란 Javascript에서 코드를 입력할 때 타입을 미리 부여�
   * 변수에 null을 할당 하는것은 변수가 이전에 참조하던 값을 더 이상 참조하지 않겠다는 의미이다.
   * 이는 이전에 할당되어 있던 값에 대한 참조를 명시적으로 제거하는 것을 의미하며, 자바스크립트 엔진은 누구도 참조하지 않은 메모리 공간에 대해 가비지 콜렉션을 수행할 것이다.
  
- ```
+ ```JavaScript
+ 
  console.log(typeof null); // object
  ```
 참고로 null의 자료형을 확인해보면 object(객체)가 나오는 것을 확인할 수 있다. 이는 Javascrip 초기버전의 오류로 하위호환성을 위해 따로 수정하지는 않고 있다.
@@ -334,7 +338,8 @@ Typescript란 Javascript에서 코드를 입력할 때 타입을 미리 부여�
   * ES6부터 추가된 선언 방식으로 let이 함께 추가되었다.
   * 변수를 상수로 선언할 수 있는 방식으로 일반적으로 상수로 선언된 변수는 값을 바꾸지 못하는 것을 뜻한다.
 
-```
+```JavaScript
+
 const a = {};
 a.name = "sungin";
 
@@ -356,7 +361,8 @@ const 키워드로 선언된 a변수에는 객체 재할당은 불가능하지�
 
    자바스크립트에서 기본적으로 제공하는 메소드인 Object.freeze() 메소드이다. 공식 문서에서는 "객체를 동결하기 위한 메소드" 라고 적혀있다.
   
-  ```
+  ```JavaScript
+  
   let b = {
     name : 'cho'
   }
@@ -366,7 +372,8 @@ const 키워드로 선언된 a변수에는 객체 재할당은 불가능하지�
 사용법은 간단하다. b 변수에 key value를 가진 객체를 바인딩 후 Object.freeze(b)를 사용해 바인딩된 변수를 동결 객체로 만들었다. </br>
 때문에 test 객체는 객체의 속성을 변경하는 시도는 불가능하다.
 
-  ```
+  ```JavaScript
+  
   b = {
       age : 27
   };
@@ -376,13 +383,15 @@ const 키워드로 선언된 a변수에는 객체 재할당은 불가능하지�
 
 그렇다면 불변 객체는 어떻게 만들 수 있을까.
 
-  ```
+  ```JavaScript
+  
   const c = {
       'name' : 'cho'
   };
 
   Object.freeze(c);
   ```
+  
 const와 Object.freeze()를 조합하여  (const의 재할당불가 + Object.freeze()의 객체속성 변경불가)
 
 const키워드로 바인딩 된 변수를 상수화 시킨 다음, Object.freeze()로 해당 변수를 동결 객체를 만들면
@@ -409,7 +418,8 @@ const키워드로 바인딩 된 변수를 상수화 시킨 다음, Object.freeze
 원시값을 복사할 때 그 값은 또 다른 독립적인 메모리 공간에 할당하기 때문에, 복사를 하고 값을 수정해도 기존 원시값을 저장한 변수에는 영향을 끼치지 않는다.</br>
 이처럼 실제 값을 복사하는 것을 깊은 복사라고 하는데  이것은 자료형을 깊은 복사한 것이다.
 
-  ```
+  ```JavaScript
+  
   const a = 'a';
   let b = 'b';
   b = 'c';
@@ -422,7 +432,8 @@ const키워드로 바인딩 된 변수를 상수화 시킨 다음, Object.freeze
 그래서 복사를 하고 객체를 수정하면 두 변수는 똑같은 참조를 가리키고 있기 때문에 기존 객체를 저장한 변수에 영향을 끼친다.</br>
 이처럼 객체의 참조값(주소값)을 복사하는 것을 얕은 복사라고 한다.  
 
-  ```
+  ```JavaScript
+  
   const a = {
   one: 1,
   two: 2,
@@ -449,7 +460,8 @@ const키워드로 바인딩 된 변수를 상수화 시킨 다음, Object.freeze
 얕은 복사 방법의 대표적인 예라고 할 수 있다.</br>
 start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배열을 리턴하는 method, 만약 start와 end를 설정하지 않는다면, 기존 배열을 전체 얕은 복사한다.
 
-  ```
+  ```JavaScript
+  
   const original = ['a',2,true,4,"hi"];
   const copy = original.slice();
   console.log(JSON.stringify(original) === JSON.stringify(copy)); // true
@@ -463,7 +475,8 @@ start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배�
 
 원시값은 기본적으로 깊은 복사이다. Slice() 메소드는 기본적으로 얕은 복사를 수행한다. 
 
-  ```
+  ```JavaScript
+  
   const original = [
   [1, 1, 1, 1],
   [0, 0, 0, 0],
@@ -484,7 +497,8 @@ start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배�
 
 만약 1차원 배열이 아닌 중첩 구조를 갖는 2차원 배열이면 얕은 복사를 수행하게 된다.
 
-  ```
+  ```JavaScript
+  
   const original = [
   {
   a: 1,
@@ -513,7 +527,8 @@ start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배�
 
     메소드의 첫 번째 인자로 빈 객체를 넣어주고 두 번째 인자로 복사할 객체를 넣어준다.
     
-  ```
+  ```JavaScript
+  
   const object = {
   a: "a",
   number: {
@@ -539,7 +554,8 @@ start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배�
 
 마찬가지로 얕은 복사이다.
 
-  ```
+  ```JavaScript
+  
   const object = {
   a: "a",
   number: {
@@ -565,7 +581,8 @@ start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배�
 
  방법이 가장 간단하고 쉽지만 다른 방법에 비해 느리다는 것과 객체가 function일 경우,  undefined로 처리한다는 것이 단점이다.
   
-  ```
+  ```JavaScript
+  
   const object = {
     a: "a",
     number: {
@@ -591,7 +608,8 @@ start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배�
  재귀 함수를 구현한 복사</br>
  복잡하다는 것이 단점이다.
   
-  ```
+  ```JavaScript
+  
   const object = {
     a: "a",
     number: {
@@ -634,7 +652,8 @@ start부터 end 인덱스까지 기존 배열에서 추출하여 새로운 배�
   
  라이브러리를 사용하면 더 쉽고 안전하게 깊은 복사를 할 수 있다. 설치를 해야 한다는 점과 일반적인 개발에는 효율적이겠지만, 코딩 테스트에는 사용할 수 없다.
   
-  ```
+  ```JavaScript
+  
   const deepCopy = require("lodash.clonedeep")
 
   const object = {
@@ -730,8 +749,97 @@ console.log(b);
   <summary>풀이 코드</summary>
   
   ```JavaScript
-  
-  
-  
+    
+let b = 1; //[1]
+//-------------------------------------------
+function hi () { //[4]
+
+const a = 1; // [5]
+
+let b = 100; // [6]
+                                                // local scope(지역 범위)는 변수 를 지역적으로 만드는 특성이다.
+                                                //즉, 이 범위 안에서 선언된 변수는 전역 범위 가 아닌 범위 내에서 해당 값 에만 바인딩된다.
+b++; //[7]                                      //따라서 이 범위 안에서의 console.log(b)값은 100, 범위 밖에서의 console.log(b)의 값은 1이 출력된다.
+
+console.log(a,b); //[8] ---> [5], [6] 출력
+
+}
+//-------------------------------------------
+//console.log(a);
+
+console.log(b); //[2] ---> [1] 출력
+
+hi(); //[3]
+
+console.log(b); //[9] ---> [1] 출력
+    
+// 1
+// 1 101
+// 1
   ```
+    
+> hi()함수가 local scope(지역범위)가 되어 범위 내에 선언된 변수는 지역 변수의 특성을 가지게 된다.</br>
+따라서 함수 범위 밖에서의 b의 출력값이 제일 위에 선언되었던 let b = 1; 의 값이 출력된 것이다.
+
+여기서 주석처리된 console.log(a)의 값을 출력한다면 참조 에러가 발생하는데 hi()라는 지역 범위 내에서 선언된 변수가 범위 밖에서 실행돼 error가 발생하는 것이다.</br>
+error를 수정하려면 다음과 같이 지역 범위 내에서 값을 출력하거나 범위 내의 값을 return하여야 한다.
+
+   ```JavaScript
+let b = 1; 
+//-------------------------------------------
+function hi () { 
+
+const a = 1; 
+
+let b = 100; 
+
+                                            
+b++;                                    
+
+console.log(a);
+
+console.log(a,b); 
+
+}
+//-------------------------------------------
+
+console.log(b); 
+
+hi();
+
+console.log(b);
+
+// 1
+// 1
+// 1 101
+// 1
+   ```
+   
+   ```JavaScript
+   let b = 1; 
+//-------------------------------------------
+function hi () { 
+
+const a = 1; 
+
+let b = 100; 
+
+
+b++;                                    
+console.log(b); 
+
+return a;
+
+}
+//-------------------------------------------
+
+console.log(hi());
+
+
+console.log(b); 
+
+// 101
+// 1
+// 1
+```
 </details>
