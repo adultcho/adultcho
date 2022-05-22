@@ -38,7 +38,7 @@ Javascript, 프로그래밍 언어가 익숙치 않다보니 문법이나 함수
 
 --------------
 
-# 2022-05-15 항해99 7일차 WIL (한 주 회고)
+# 2022-05-15 항해99 7일차 WIL (1주차 회고)
 
 ### 항해99 시작한지 벌써 1주일째가 되었다. 일요일은 지난 한 주를 되돌하보며 회고하는 시간을 갖고자 한다.
 
@@ -57,4 +57,113 @@ Javascript, 프로그래밍 언어가 익숙치 않다보니 문법이나 함수
 코딩을 처음 시작하고 부족한 부분이 너무도 많지만 좋은팀원들을 만나 열심히 더 발전해 나갈수 있다는 확신이 생긴다. 지금 이 마음가짐 잊지 않고 남은 항해 무사히 수료하여 팀원분들과 좋은 개발자가 되기 위해 노력할 것이다.
 
 
+-------------
 
+# 2022-05-22 항해99 14일차 WIL (2주차 회고)
+
+이번주에 cs스터디 발제, 알고리즘 주차가 끝나고 내가 선택한 주특기 react의 기초 주차가 시작되었다.
+
+우선 한주동안 프로그래머스에서 문제를 풀며 알고리즘과 Javascript의 기초를 공부하는 시간을 가졌는데 처음 접해보는 것이기에 어려움을 느꼈다.</br>
+하지만 문제를 계속 풀고 팀원들과 코드를 리뷰하며 점차 익숙해져갔고 주차 후반의 알고리즘 모의고사와 본 시험에서도 제한 시간 이내에 문제를 풀고 나올 수 있었다.</br>
+
+알고리즘 문제를 풀며 Javascript에 대해 거의 모르다보니 필요한 Method를 그때 그때 구글링하고, 조건문과 반복문을 주로 사용하며 문제를 풀었는데,</br>
+점차 공부하다가 let, const 화살표 함수, 콜백함수, 스프레드 연산자 등의 존재를 알고 이것이 ES6에서 주로 추가된 문법이라는 것을 알았다.</br>
+분명 내가 지금 배우고 사용중인건 JavaScript인데... ES6? EcmaScript? 이건 뭐지? 하는 궁금증과 함께 관련 내용과 JavaScript의 기초적인 부분을 공부해야겠다는 생각이 들었다.</br>
+공부한 것을 정리해 보자면</br>
+
+## ECMAScript란?
+ECMA스크립트(ECMAScript, 또는 ES)는 자바스크립트를 표준화 하기위해 만들어진, ECMA-262 기술 규격에 따라 정의하고 있는 표준화된 스크립트 프로그래밍 언어를 말한다.
+
+## 버전별 EcmaScript
+
+버전 별로 간단히 설명하자면 아래와 같다.
+
+ 
+
+## S1, ES2, ES3, ES4
+ES1(1997년 6월) — ES2(1998년 6월) — ES3(1999년 12월) — ES4(Abandoned)
+
+처음 3판이 해마다 나왔고 4번째 판은 언어에 얽힌 정치적인 차이로 인해 버려졌다.
+
+ 
+
+(ES4는 거절되고, 바로 ES5가 나왔음) 
+
+## ES5(2009)
+
+ 
+
+이전 버전에서 10년만인 2009년 12월에 발표됐으며 이후 버전과 거의 6년 차이가 난다.
+
+## ES 2015(ES6)
+
+ES6는 class, template tag, arrow function 등과 같은 새로운 개념들이 있으며, 이전 버전과 새로운 개념들이 많이 나왔다.
+
+ES6의 주된 특징
+“Top 10 ES6 Features Every Busy JavaScript Developer Must Know” 글을 참고하면 쉽게 알 수 있다.
+
+   * Default Parameters
+   * Template Literals (string 을 합칠 때 더이상 +를 붙이지 않아도 된다!)
+   * Multi-line Strings
+   * Destructuring Assignment
+   * Enhanced Object Literals
+   * Arrow Functions
+   * Promises
+   * Block-Scoped Constructs Let and Const
+   * Classes
+   * Modules
+
+## ES7 
+
+2016년 6월 발표 됐으며, ES5 → ES6의 변화와는 달리 많은 변화가 있지는 않았다. ES2016에서는 오직 두가지 특징만 소개되었다.
+
+   * Array.protorype.includes()
+   어레이 포함 여부는 indexOf() !== -1 하던것을 includes()함수로 대체할 수 있다. 또한 NaN의 포함여부도 알 수 있게됐다.
+
+```JavaScript
+   
+   let numbers = [1, 2, 3, 4];
+   if (numbers.indexOf(2) !== -1) {
+   console.log('Contains');
+   }
+   // ES2016
+   if (numbers.includes(2)) {
+   console.log('Contains');
+   }
+   // NaN 포함여부 확인
+   let numbers = [1, 2, 3, 4, NaN];
+   console.log(numbers.indexOf(NaN)); // prints -1
+   console.log(numbers.includes(NaN)); // prints true
+```
+   * Exponentiation oprator
+   : JavaScript가 이미 제공중인 +, -, * 산술 연산자 외에 추가로 ** 연산자가 추가됐다. 이 연산자는 Math.pow() 함수와 동일한 기능을 한다.
+   
+```JavaScript
+   let base = 3;
+   let exponent = 4;
+   console.log(base**exponent); // 81
+```
+
+## ES8 / ES2017
+2017년 6월 발표 됐으며, ES2017의 주된 특징은 아래와 같다.
+
+   * String padding
+   * Object.values and Object.entries
+   * Object.getOwnPropertyDescriptors
+   * Trailing commas in function parameter lists and calls
+   * Async functions
+   
+   ### async — await
+ 
+> ES6에서 callback hell을 해결하기 위해 Promise가 도입되었다고 했는데 async-await도 Promise처럼 callback을 해결할 뿐만 아니라
+  좀 더 직관적이고 단순하게 코드를 만들 수 있다.
+   
+## ES9 / ES2018
+2018년 6월 발표됐으며, ES2018의 주된 특징은 아래와 같다.
+
+   * Object Rest/Spread
+   * Promise finally
+   * Async iteration
+   * 정규표현식
+
+앞으로 react를 본격적으로 공부하면서 JavaScript와 HTML,CSS DOM 등 다양한 부분의 기초 및 활용방법을 공부하고 매일 기록하는 습관을 가져야겠다.
