@@ -64,7 +64,7 @@
 // 제한시간 안내
 // 정확성 테스트 : 10초
 
-function solution(id_list, report, k) {
-    var answer = [];
-    return answer;
-}
+// function solution(id_list, report, k) {
+//     var answer = [];
+//     return answer;
+// }

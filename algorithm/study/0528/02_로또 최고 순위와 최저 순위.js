@@ -50,9 +50,27 @@
 // 입출력 예 #3
 // 민우가 구매한 로또의 번호와 당첨 번호가 모두 일치하므로, 최고 순위와 최저 순위는 모두 1등입니다.
 
-// 실제로 사용되는 로또 순위의 결정 방식과는 약간 다르지만, 이 문제에서는 지문에 명시된 대로 로또 순위를 결정하도록 합니다.  ↩
-
 function solution(lottos, win_nums) {
-    var answer = [];
-    return answer;
+  let sameCount = lottos.filter((e) => win_nums.includes(e)).length; 
+  //민우가 구매한 로또번호에서 당첨번호와 같은 번호의 개수
+  let zeroCount = lottos.filter((e) => e === 0).length; 
+  // 민우가 구매한 로또 번호에서 알아볼 수 없는 번호를 0으로 했을때 0의 개수
+  //  console.log(sameCount, zeroCount);
+  // 2 2
+  // 0 6
+  // 6 0
+
+  // 최저순위는 두 번보에서 같은 숫자가 0개,1개일때 6위(낙첨) 1보다 클때는 7-(같은 숫자 개수)이다.
+  let lowRank = sameCount <= 1 ? 6 : 7 - sameCount;
+  //최고순위는 알아볼수 없는 숫자가 0일때 그 갯수가 6이면 가능한 최고 순위는 1위, 개수가 6이 아닐때는 최저 순위에서 0의 개수만큼 뺀다. 
+  let topRank = zeroCount === 6 ? 1 : lowRank - zeroCount;
+  // console.log(topRank, lowRank);
+
+  return [topRank, lowRank];
 }
+console.log(solution([44, 1, 0, 0, 31, 25], [31, 10, 45, 1, 6, 19]));
+// // [3, 5]
+console.log(solution([0, 0, 0, 0, 0, 0], [38, 19, 20, 40, 15, 25]));
+// // [1, 6]
+console.log(solution([45, 4, 35, 20, 3, 9], [20, 9, 3, 45, 4, 35]));
+// // [1, 1]
