@@ -1,18 +1,20 @@
 ## Teck Stack 🧑‍💻
 
 <div>
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
-<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
-<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
+<img alt="JavaScript" src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
+<img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
+<img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
   <br>
-<img src="https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=blue">
-<img src="https://img.shields.io/badge/redux-tookit-light black?style=for-the-badge&logoredux&logoColor=blue">
-<img src="https://img.shields.io/badge/webRTC-white?style=for-the-badge&logo=webRTC&logoColor=blue">
-<img src="https://img.shields.io/badge/socketio-black?style=for-the-badge&logo=socket.io&logoColor=white">
+<img alt="React" src="https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=blue">
+<img alt="Redux Toolkit" src="https://img.shields.io/badge/redux-tookit-light black?style=for-the-badge&logoredux&logoColor=blue">
   <br>
-<img src="https://img.shields.io/badge/amazonaws-green?style=for-the-badge&logo=amazonaws&logoColor=grey">
-<img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=grey">
-<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=grey">
+<img alt="Github" src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=grey">
+<img alt="Git" src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=grey">
+  <br>
+<img alt="WebRTC" src="https://img.shields.io/badge/webRTC-white?style=for-the-badge&logo=webRTC&logoColor=blue">
+<img alt="Socket.io" src="https://img.shields.io/badge/socketio-black?style=for-the-badge&logo=socket.io&logoColor=white">
+  <br>
+<img alt="Amazone AWS" src="https://img.shields.io/badge/amazonaws-green?style=for-the-badge&logo=amazonaws&logoColor=grey">
 </div>
 
 - - -
