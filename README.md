@@ -1,6 +1,9 @@
 ## Teck Stack 🧑‍💻
 
-<div align=center>
+<div>
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white">
+<img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=HTML5&logoColor=white">
+<img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=CSS3&logoColor=white">
 <img src="https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=blue">
 <img src="https://img.shields.io/badge/redux-tookit-light black?style=for-the-badge&logoredux&logoColor=blue">
 <img src="https://img.shields.io/badge/webRTC-white?style=for-the-badge&logo=webRTC&logoColor=blue">
