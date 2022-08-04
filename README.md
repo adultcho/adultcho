@@ -1,4 +1,5 @@
 ## Teck Stack 🧑‍💻
+- - -
 
 <div align=center>
 <img src="https://img.shields.io/badge/react-black?style=for-the-badge&logo=react&logoColor=blue">
@@ -11,7 +12,9 @@
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=grey">
 
 </div>
----------------------------------------
+- - -
+
+
   <br>
 
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=adultcho&show_icons=true&theme=radical)
